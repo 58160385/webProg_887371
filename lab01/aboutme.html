@@ -1,12 +1,72 @@
 <html>
     <head> 
     <meta charset="UTF-8">
+    <script language="JavaScript1.2">
+    function reapply(){
+    setTimeout("slideit()",2000)
+    return true
+    }
+   window.onerror=reapply
+   </script>
+   <script language="JavaScript1.1">
+   <!--
+  var image1=new Image()
+  image1.src="Fai.jpg"
+  var image2=new Image()
+  image2.src="Fai2.jpg"
+  var image3=new Image()
+  image3.src="Fai3.jpg"
+  //-->
+  </script>
     <title>About Me</title>
     </head>
-    <body>
+    <body onLoad="slideit()">
      <body background="55.jpg">
-    <h1 align="center"><font color =#FF6600 > About Me </h1>
-    <center><img src="Fai.jpg" width="400px" height="300px"></center><br>
+    <h1 align="center"><font color =#CC0033><I> About Me </I></h1>
+     <center>
+     <a href="javascript:slidelink()"
+onMouseover="window.status='Click on the image to learn more about it!';return true"
+onMouseout="window.status=''">
+
+<p><img src="3.jpg" name="slide" border="0" style="filter:blendTrans(duration=3)"
+width="550" height="350"></a> <script>
+<!--
+////change number of images below 
+var number_of_images=3
+//change speed below (in seconds)
+var speed=3
+var step=1
+var whichimage=1
+function slideit(){
+if (!document.images)
+return
+if (document.all)
+slide.filters.blendTrans.apply()
+document.images.slide.src=eval("image"+step+".src")
+if (document.all)
+slide.filters.blendTrans.play()
+whichimage=step
+if (step<number_of_images)
+step++
+else
+step=1
+if (document.all)
+setTimeout("slideit()",speed*1000+3000)
+else
+setTimeout("slideit()",speed*1000)
+}
+function slidelink(){
+if (whichimage==1)
+window.location="Fai.jpg"
+else if (whichimage==2)
+window.location="Fai2.jpg"
+else if (whichimage==3)
+window.location="Fai3.jpg"
+}
+//-->
+</script>
+</center>
+    
     <center> <b><u>ชื่อ</u></b> : นางสาวณัฐฌา โคมา <b><u>รหัสนิสิต</u></b>: 58160385</center><br>
     <center> <b><u>ชื่อเล่น</u></b> : ฝ้าย</center><br>
     <center> <b><u>การศึกษา</u></b> : สาขาเทคโนโลยีสารสนเทศ คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา</center><br>
